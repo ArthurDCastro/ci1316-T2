@@ -83,4 +83,30 @@ void merge_counts(int *global_counts, int **local_counts, int nThreads, int np);
  */
 thread_data_t *create_thread_data(int start, int end, long long *Input, long long *P, int np, int *local_counts, pthread_mutex_t *mutex, pthread_barrier_t *barrier);
 
+/**
+ * @brief Preenche os vetores Output e Pos com base nos resultados de global_counts.
+ *
+ * @param Input Vetor de entrada contendo os números a serem particionados.
+ * @param n Número de elementos no vetor Input.
+ * @param P Vetor de partições (ordenado).
+ * @param np Número de partições.
+ * @param Output Vetor de saída particionado.
+ * @param Pos Vetor que indica os índices iniciais de cada faixa no Output.
+ * @param global_counts Vetor contendo as contagens globais de cada faixa.
+ */
+void fill_output_and_pos(long long *Input, int n, long long *P, int np, long long *Output, int *Pos, int *global_counts);
+
+
+/**
+ * @brief Verifica se o particionamento foi realizado corretamente.
+ *
+ * @param Input Vetor de entrada.
+ * @param n Tamanho do vetor de entrada.
+ * @param P Vetor de partições (ordenado).
+ * @param np Número de partições.
+ * @param Output Vetor de saída particionado.
+ * @param Pos Vetor de posições indicando os inícios das partições.
+ */
+void verifica_particoes(long long *Input, int n, long long *P, int np, long long *Output, int *Pos);
+
 #endif // MULTI_PARTITION_H

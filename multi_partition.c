@@ -2,6 +2,7 @@
 #include <limits.h> // Para LLONG_MAX
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 #include "multi_partition.h"
 
@@ -30,15 +31,14 @@ void merge_counts(int *global_counts, int **local_counts, int nThreads, int np)
 {
     for (int t = 0; t < nThreads; t++)
     {
-        for (int j = 0; j <= np; j++)
+        for (int j = 0; j < np; j++)
         {
             global_counts[j] += local_counts[t][j];
         }
     }
 }
 
-thread_data_t *create_thread_data(int start, int end, long long *Input, long long *P, int np,
-                                  int *local_counts, pthread_mutex_t *mutex, pthread_barrier_t *barrier)
+thread_data_t *create_thread_data(int start, int end, long long *Input, long long *P, int np, int *local_counts, pthread_mutex_t *mutex, pthread_barrier_t *barrier)
 {
     // Alocar memória para a estrutura
     thread_data_t *data = (thread_data_t *)malloc(sizeof(thread_data_t));
@@ -60,6 +60,35 @@ thread_data_t *create_thread_data(int start, int end, long long *Input, long lon
     return data;
 }
 
+void fill_output_and_pos(long long *Input, int n, long long *P, int np, long long *Output, int *Pos, int *global_counts) {
+    // Inicializa o vetor Pos com o prefix sum de global_counts
+    Pos[0] = 0;
+    for (int i = 1; i < np; i++) {
+        Pos[i] = Pos[i - 1] + global_counts[i - 1];
+    }
+
+    // Vetores temporários para cada faixa no Output
+    int *current_index = malloc(np * sizeof(int));
+    for (int i = 0; i < np; i++)
+    {
+        current_index[i] = Pos[i];
+    }
+
+    // Preenche o vetor Output particionado
+    for (int i = 0; i < n; i++) {
+        // Determina a partição do elemento atual de Input
+        int partition = 0;
+        while (partition < np && Input[i] >= P[partition])
+            partition++;
+
+        Output[current_index[partition]] = Input[i];
+        current_index[partition]++;
+    }
+
+    free(current_index);
+}
+
+
 void multi_partition(long long *Input, int n, long long *P, int np, long long *Output, int *Pos, int nT)
 {
     int nThreads = nT; // Número de threads
@@ -79,8 +108,6 @@ void multi_partition(long long *Input, int n, long long *P, int np, long long *O
     // Divisão de trabalho entre threads
     int chunk_size = (n + nThreads - 1) / nThreads;
     thread_data_t *thread_data[nThreads];
-
-    printf("nThreads: %d\n", nThreads);
 
     for (int t = 0; t < nThreads; t++)
     {
@@ -113,8 +140,8 @@ void multi_partition(long long *Input, int n, long long *P, int np, long long *O
     }
 
     // Junta os resultados de todas as threads
-    int *global_counts = calloc(np + 1, sizeof(int));
-    merge_counts(global_counts, local_counts, nThreads, np);
+    int *global_counts = calloc(np, sizeof(int));
+    merge_counts(global_counts, local_counts, nThreads, np);    
 
     // Libera recursos
     for (int i = 0; i < nThreads; i++)
@@ -122,10 +149,37 @@ void multi_partition(long long *Input, int n, long long *P, int np, long long *O
         free(local_counts[i]);
     }
     free(local_counts);
+
+    // Global counts agora pode ser usado para calcular Pos (prefix sum)
+    fill_output_and_pos(Input, n, P, np, Output, Pos, global_counts);
+    
     free(global_counts);
 
     pthread_barrier_destroy(&barrier);
     pthread_mutex_destroy(&mutex);
+}
 
-    // Global counts agora pode ser usado para calcular Pos (prefix sum)
+void verifica_particoes(long long *Input, int n, long long *P, int np, long long *Output, int *Pos) {
+    int erro = 0;
+
+    // Verifica cada partição
+    for (int i = 0; i < np - 1; i++) {
+        for (int j = Pos[i]; j < Pos[i + 1]; j++) {
+            if (Output[j] >= P[i]){
+                erro = 1;
+                break;
+            }
+        }
+
+        if (erro) {
+            break;
+        }
+    }
+
+    // Resultado da verificação
+    if (erro) {
+        printf("\n===> particionamento COM ERROS\n");
+    } else {
+        printf("\n===> particionamento CORRETO\n");
+    }
 }

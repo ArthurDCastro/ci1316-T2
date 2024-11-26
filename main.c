@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
     long long *Input = generate_random_vector(n, 0); // Vetor de entrada aleatório
     long long *P = generate_random_vector(np, 1);    // Vetor de partições aleatório, ordenado
     long long *Output = create_vector(n);            // Vetor de saída (não inicializado)
-    int *Pos = create_pos_vector(np + 1);            // Vetor Pos com np + 1 posições
+    int *Pos = create_pos_vector(np);            // Vetor Pos com np + 1 posições
 
     // Testa sucesso da alocação
     if (Input == NULL || P == NULL || Output == NULL || Pos == NULL)
@@ -68,13 +68,13 @@ int main(int argc, char *argv[])
 
     // Imprimir vetores para validação
     printf("\n--- Vetores Gerados com Sucesso ---\n");
-    print_vector(Input, n, "Vetor de Entrada (Input)");
-    print_vector(P, np, "Vetor de Partições (P)");
 
     multi_partition(Input, n, P, np, Output, Pos, nThreads);
 
-    print_vector(Output, n, "Vetor de Saida (Output)");
-    print_pos_vector(Pos, np + 1, "Vetor de Posições (Pos)");
+    printf("\n--- Vetor particionado ---\n");
+
+
+    verifica_particoes(Input, n, P, np, Output, Pos);
 
     // Limpa memória
     destroy_vector(Input);

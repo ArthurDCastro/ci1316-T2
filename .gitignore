@@ -1,0 +1,23 @@
+# Ignorar todos os arquivos executáveis
+*.exe
+*.out
+*.o
+*.a
+*.so
+
+# Ignorar executáveis sem extensão
+a.out
+programa
+multi_partition
+
+# Ignorar arquivos temporários de compilação
+*.log
+*.tmp
+*.d
+*.dSYM/
+
+# Ignorar arquivos gerados por editores ou IDEs
+.vscode/
+.idea/
+*.swp
+*~
