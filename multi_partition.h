@@ -94,7 +94,7 @@ thread_data_t *create_thread_data(int start, int end, long long *Input, long lon
  * @param Pos Vetor que indica os índices iniciais de cada faixa no Output.
  * @param global_counts Vetor contendo as contagens globais de cada faixa.
  */
-void fill_output_and_pos(long long *Input, int n, long long *P, int np, long long *Output, int *Pos, int *global_counts);
+void fill_output(long long *Input, int n, long long *P, int np, long long *Output, int *Pos, int *global_counts);
 
 
 /**
@@ -108,5 +108,15 @@ void fill_output_and_pos(long long *Input, int n, long long *P, int np, long lon
  * @param Pos Vetor de posições indicando os inícios das partições.
  */
 void verifica_particoes(long long *Input, int n, long long *P, int np, long long *Output, int *Pos);
+
+/**
+ * @brief Busca binária para determinar o índice da partição correspondente ao valor.
+ *
+ * @param arr Vetor de partições (ordenado).
+ * @param size Número de partições (tamanho do vetor `arr`).
+ * @param value Valor a ser buscado.
+ * @return int Índice da partição correspondente ao valor.
+ */
+int binary_search_partition(long long *arr, int size, long long value);
 
 #endif // MULTI_PARTITION_H

@@ -5,13 +5,17 @@
 
 #include "multi_partition.h"
 #include "util.h"
+#include "chrono.h"
 
 #define MAX_THREADS 64        // Limite de threads permitido
 #define MAX_PARTITIONS 100000 // Limite de partições permitido
+#define NTIMES 10
 
 int main(int argc, char *argv[])
 {
     int n, np, nThreads;
+
+    chronometer_t parallelReductionTime;
 
     // Verifica se o número correto de argumentos foi passado
     if (argc != 4)
@@ -69,12 +73,27 @@ int main(int argc, char *argv[])
     // Imprimir vetores para validação
     printf("\n--- Vetores Gerados com Sucesso ---\n");
 
-    multi_partition(Input, n, P, np, Output, Pos, nThreads);
+    chrono_reset( &parallelReductionTime );
+    chrono_start( &parallelReductionTime );
+
+    for (int i = 0; i < NTIMES; i++)
+        multi_partition(Input, n, P, np, Output, Pos, nThreads);
+
+    chrono_stop( &parallelReductionTime );
 
     printf("\n--- Vetor particionado ---\n");
 
-
     verifica_particoes(Input, n, P, np, Output, Pos);
+
+    chrono_reportTime( &parallelReductionTime, "parallelReductionTime" );
+    
+    // calcular e imprimir a VAZAO (numero de operacoes/s)
+    double total_time_in_seconds = (double) chrono_gettotal( &parallelReductionTime ) /
+                                      ((double)1000*1000*1000);
+    printf( "total_time_in_seconds: %lf s\n", total_time_in_seconds );
+                                  
+    double OPS = ((double)n*NTIMES)/total_time_in_seconds;
+    printf( "Throughput: %lf OP/s\n", OPS );
 
     // Limpa memória
     destroy_vector(Input);

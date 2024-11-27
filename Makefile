@@ -8,7 +8,7 @@ CC = gcc
 CFLAGS = -Wall -pthread -O2
 
 # Arquivos fonte
-SRC = main.c multi_partition.c util.c
+SRC = main.c multi_partition.c util.c chrono.c
 # Arquivo de cabeçalho (opcional para listagem)
 HEADERS = multi_partition.h 
 

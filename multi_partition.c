@@ -14,13 +14,10 @@ void *thread_count_partition(void *arg)
     int np = data->np;
     int *local_counts = data->local_counts;
 
-    // Contagem local
-    for (int i = start; i < end; i++)
-    {
-        int j = 0;
-        while (j < np && Input[i] >= P[j])
-            j++;
-        local_counts[j]++;
+    // Contagem local com busca binária
+    for (int i = start; i < end; i++) {
+        int partition = binary_search_partition(P, np, Input[i]);
+        local_counts[partition]++;
     }
 
     pthread_barrier_wait(data->barrier); // Sincroniza threads
@@ -60,13 +57,7 @@ thread_data_t *create_thread_data(int start, int end, long long *Input, long lon
     return data;
 }
 
-void fill_output_and_pos(long long *Input, int n, long long *P, int np, long long *Output, int *Pos, int *global_counts) {
-    // Inicializa o vetor Pos com o prefix sum de global_counts
-    Pos[0] = 0;
-    for (int i = 1; i < np; i++) {
-        Pos[i] = Pos[i - 1] + global_counts[i - 1];
-    }
-
+void fill_output(long long *Input, int n, long long *P, int np, long long *Output, int *Pos, int *global_counts) {
     // Vetores temporários para cada faixa no Output
     int *current_index = malloc(np * sizeof(int));
     for (int i = 0; i < np; i++)
@@ -77,10 +68,10 @@ void fill_output_and_pos(long long *Input, int n, long long *P, int np, long lon
     // Preenche o vetor Output particionado
     for (int i = 0; i < n; i++) {
         // Determina a partição do elemento atual de Input
-        int partition = 0;
-        while (partition < np && Input[i] >= P[partition])
-            partition++;
 
+        int partition = binary_search_partition(P, np, Input[i]);
+
+        //barreira
         Output[current_index[partition]] = Input[i];
         current_index[partition]++;
     }
@@ -151,7 +142,14 @@ void multi_partition(long long *Input, int n, long long *P, int np, long long *O
     free(local_counts);
 
     // Global counts agora pode ser usado para calcular Pos (prefix sum)
-    fill_output_and_pos(Input, n, P, np, Output, Pos, global_counts);
+    
+    // Inicializa o vetor Pos com o prefix sum de global_counts
+    Pos[0] = 0;
+    for (int i = 1; i < np; i++) {
+        Pos[i] = Pos[i - 1] + global_counts[i - 1];
+    }
+
+    fill_output(Input, n, P, np, Output, Pos, global_counts);
     
     free(global_counts);
 
@@ -182,4 +180,21 @@ void verifica_particoes(long long *Input, int n, long long *P, int np, long long
     } else {
         printf("\n===> particionamento CORRETO\n");
     }
+}
+
+int binary_search_partition(long long *arr, int size, long long value) {
+    int left = 0, right = size - 1;
+
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+
+        if (value < arr[mid]) {
+            right = mid - 1;
+        } else {
+            left = mid + 1;
+        }
+    }
+
+    // `left` é o índice da partição em que o valor pertence
+    return left;
 }
