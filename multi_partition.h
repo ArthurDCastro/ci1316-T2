@@ -16,6 +16,7 @@ typedef struct
     long long *P;               // Ponteiro para o vetor de partições.
     int np;                     // Número de partições no vetor P.
     int *local_counts;          // Ponteiro para o vetor de contagem local da thread.
+    int *T;                     // Ponteiro para o vetor temporario que tem tanho de Input.
     pthread_mutex_t *mutex;     // Mutex compartilhado (não utilizado nesta versão).
     pthread_barrier_t *barrier; // Barreira para sincronização entre threads.
 } thread_data_t;
@@ -75,13 +76,14 @@ void merge_counts(int *global_counts, int **local_counts, int nThreads, int np);
  * @param P Ponteiro para o vetor de partições.
  * @param np Número de partições no vetor P.
  * @param local_counts Ponteiro para o vetor de contagem local da thread.
+ * @param T Ponteiro para o vetor temporario de tamanho do Input.
  * @param mutex Ponteiro para o mutex compartilhado (pode ser NULL se não utilizado).
  * @param barrier Ponteiro para a barreira compartilhada entre threads.
  * @return thread_data_t* Ponteiro para a estrutura thread_data_t alocada e inicializada.
  *
  * A estrutura retornada deve ser liberada manualmente pelo usuário com `free` após o uso.
  */
-thread_data_t *create_thread_data(int start, int end, long long *Input, long long *P, int np, int *local_counts, pthread_mutex_t *mutex, pthread_barrier_t *barrier);
+thread_data_t *create_thread_data(int start, int end, long long *Input, long long *P, int np, int *local_counts, int *T, pthread_mutex_t *mutex, pthread_barrier_t *barrier);
 
 /**
  * @brief Preenche os vetores Output e Pos com base nos resultados de global_counts.
@@ -92,10 +94,9 @@ thread_data_t *create_thread_data(int start, int end, long long *Input, long lon
  * @param np Número de partições.
  * @param Output Vetor de saída particionado.
  * @param Pos Vetor que indica os índices iniciais de cada faixa no Output.
- * @param global_counts Vetor contendo as contagens globais de cada faixa.
+ * @param T Vetor temporario tamanho n.
  */
-void fill_output(long long *Input, int n, long long *P, int np, long long *Output, int *Pos, int *global_counts);
-
+void fill_output(long long *Input, int n, long long *P, int np, long long *Output, int *Pos, int *T);
 
 /**
  * @brief Verifica se o particionamento foi realizado corretamente.

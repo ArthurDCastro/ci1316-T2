@@ -121,7 +121,7 @@ long long geraAleatorioLL()
 {
     int a = rand();
     int b = rand();
-    return (long long)a*100 + b;
+    return (long long)a * 100 + b;
 }
 
 int compare_long_long(const void *a, const void *b)
