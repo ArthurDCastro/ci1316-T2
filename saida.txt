@@ -1,0 +1,681 @@
+./roda-todos-slurm.sh rodando no host  IdeaPad3
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 1 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 8064189520 ns for 1 ops 
+        ==> each op takes 8064189520 ns
+total_time_in_seconds: 8.064190 s
+Throughput: 9920401.771510 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 1 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 8114087255 ns for 1 ops 
+        ==> each op takes 8114087255 ns
+total_time_in_seconds: 8.114087 s
+Throughput: 9859396.070791 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 1 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 7891636282 ns for 1 ops 
+        ==> each op takes 7891636282 ns
+total_time_in_seconds: 7.891636 s
+Throughput: 10137314.638090 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 1 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 7967116073 ns for 1 ops 
+        ==> each op takes 7967116073 ns
+total_time_in_seconds: 7.967116 s
+Throughput: 10041274.567483 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 1 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 7792490434 ns for 1 ops 
+        ==> each op takes 7792490434 ns
+total_time_in_seconds: 7.792490 s
+Throughput: 10266294.283910 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 2 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 4259062154 ns for 1 ops 
+        ==> each op takes 4259062154 ns
+total_time_in_seconds: 4.259062 s
+Throughput: 18783477.936537 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 2 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 4192217968 ns for 1 ops 
+        ==> each op takes 4192217968 ns
+total_time_in_seconds: 4.192218 s
+Throughput: 19082977.223669 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 2 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 4207272394 ns for 1 ops 
+        ==> each op takes 4207272394 ns
+total_time_in_seconds: 4.207272 s
+Throughput: 19014694.678217 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 2 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 4180379964 ns for 1 ops 
+        ==> each op takes 4180379964 ns
+total_time_in_seconds: 4.180380 s
+Throughput: 19137016.416912 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 2 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 4277748455 ns for 1 ops 
+        ==> each op takes 4277748455 ns
+total_time_in_seconds: 4.277748 s
+Throughput: 18701426.893508 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 3 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 3139253153 ns for 1 ops 
+        ==> each op takes 3139253153 ns
+total_time_in_seconds: 3.139253 s
+Throughput: 25483768.304429 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 3 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 3120195044 ns for 1 ops 
+        ==> each op takes 3120195044 ns
+total_time_in_seconds: 3.120195 s
+Throughput: 25639422.815518 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 3 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 3119020319 ns for 1 ops 
+        ==> each op takes 3119020319 ns
+total_time_in_seconds: 3.119020 s
+Throughput: 25649079.460197 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 3 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 3133399937 ns for 1 ops 
+        ==> each op takes 3133399937 ns
+total_time_in_seconds: 3.133400 s
+Throughput: 25531372.186276 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 3 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 3123562052 ns for 1 ops 
+        ==> each op takes 3123562052 ns
+total_time_in_seconds: 3.123562 s
+Throughput: 25611785.092848 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 4 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 2354669684 ns for 1 ops 
+        ==> each op takes 2354669684 ns
+total_time_in_seconds: 2.354670 s
+Throughput: 33975041.401179 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 4 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 2352730122 ns for 1 ops 
+        ==> each op takes 2352730122 ns
+total_time_in_seconds: 2.352730 s
+Throughput: 34003050.010680 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 4 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 2611609303 ns for 1 ops 
+        ==> each op takes 2611609303 ns
+total_time_in_seconds: 2.611609 s
+Throughput: 30632453.295408 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 4 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 2526851989 ns for 1 ops 
+        ==> each op takes 2526851989 ns
+total_time_in_seconds: 2.526852 s
+Throughput: 31659946.980773 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 4 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 2832149324 ns for 1 ops 
+        ==> each op takes 2832149324 ns
+total_time_in_seconds: 2.832149 s
+Throughput: 28247098.174545 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 5 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 2313479844 ns for 1 ops 
+        ==> each op takes 2313479844 ns
+total_time_in_seconds: 2.313480 s
+Throughput: 34579942.508460 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 5 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 2273418037 ns for 1 ops 
+        ==> each op takes 2273418037 ns
+total_time_in_seconds: 2.273418 s
+Throughput: 35189304.693636 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 5 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 2276961762 ns for 1 ops 
+        ==> each op takes 2276961762 ns
+total_time_in_seconds: 2.276962 s
+Throughput: 35134538.196957 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 5 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 2275015510 ns for 1 ops 
+        ==> each op takes 2275015510 ns
+total_time_in_seconds: 2.275016 s
+Throughput: 35164595.427308 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 5 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 2278546630 ns for 1 ops 
+        ==> each op takes 2278546630 ns
+total_time_in_seconds: 2.278547 s
+Throughput: 35110099.985094 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 6 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 2009513608 ns for 1 ops 
+        ==> each op takes 2009513608 ns
+total_time_in_seconds: 2.009514 s
+Throughput: 39810628.642431 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 6 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 1956459516 ns for 1 ops 
+        ==> each op takes 1956459516 ns
+total_time_in_seconds: 1.956460 s
+Throughput: 40890189.316854 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 6 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 1957495782 ns for 1 ops 
+        ==> each op takes 1957495782 ns
+total_time_in_seconds: 1.957496 s
+Throughput: 40868542.724656 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 6 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 1961905137 ns for 1 ops 
+        ==> each op takes 1961905137 ns
+total_time_in_seconds: 1.961905 s
+Throughput: 40776691.233058 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 6 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 1959706150 ns for 1 ops 
+        ==> each op takes 1959706150 ns
+total_time_in_seconds: 1.959706 s
+Throughput: 40822446.773461 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 7 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 1745461005 ns for 1 ops 
+        ==> each op takes 1745461005 ns
+total_time_in_seconds: 1.745461 s
+Throughput: 45833163.714820 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 7 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 1744924974 ns for 1 ops 
+        ==> each op takes 1744924974 ns
+total_time_in_seconds: 1.744925 s
+Throughput: 45847243.401309 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 7 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 1782552464 ns for 1 ops 
+        ==> each op takes 1782552464 ns
+total_time_in_seconds: 1.782552 s
+Throughput: 44879464.484586 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 7 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 1739919301 ns for 1 ops 
+        ==> each op takes 1739919301 ns
+total_time_in_seconds: 1.739919 s
+Throughput: 45979143.948815 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 7 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 1756785048 ns for 1 ops 
+        ==> each op takes 1756785048 ns
+total_time_in_seconds: 1.756785 s
+Throughput: 45537728.187678 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 8 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 1567527589 ns for 1 ops 
+        ==> each op takes 1567527589 ns
+total_time_in_seconds: 1.567528 s
+Throughput: 51035784.353267 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 8 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 1731102927 ns for 1 ops 
+        ==> each op takes 1731102927 ns
+total_time_in_seconds: 1.731103 s
+Throughput: 46213312.190882 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 8 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 1688938226 ns for 1 ops 
+        ==> each op takes 1688938226 ns
+total_time_in_seconds: 1.688938 s
+Throughput: 47367037.330589 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 8 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 1590235281 ns for 1 ops 
+        ==> each op takes 1590235281 ns
+total_time_in_seconds: 1.590235 s
+Throughput: 50307021.203613 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+Executando com 8000000 elementos, 1000 partições e 8 threads.
+
+--- Vetores Gerados com Sucesso ---
+
+--- Vetor particionado ---
+
+===> particionamento CORRETO
+
+parallelReductionTime deltaT(ns): 1572105977 ns for 1 ops 
+        ==> each op takes 1572105977 ns
+total_time_in_seconds: 1.572106 s
+Throughput: 50887154.664129 OP/s
+
+Teste de sucesso concluído! Memória liberada corretamente.
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+nao executado
+-----------------------
+nao executado

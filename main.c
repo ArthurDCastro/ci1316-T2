@@ -28,6 +28,8 @@ int main(int argc, char *argv[])
     n = atoi(argv[1]);        // Número total de elementos
     np = atoi(argv[2]);       // Número de partições
     nThreads = atoi(argv[3]); // Número de threads
+    // np = 100000;       // Número de partições
+    nThreads = atoi(argv[3]); // Número de threads
 
     // Validação dos argumentos
     if (n <= 0)
